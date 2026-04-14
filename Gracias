@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Toca aqui 🐢</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+
+    h1 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 40px;
+      animation: aparecer 2s ease;
+      text-align: center;
+    }
+
+    button {
+      padding: 18px 35px;
+      font-size: 22px;
+      border: none;
+      border-radius: 12px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #e63950;
+    }
+
+    #mensaje {
+      margin-top: 30px;
+      font-size: 45px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      display: none;
+      animation: zoomIn 1s ease forwards;
+    }
+
+    .rosa {
+      font-size: 80px;
+      margin-top: 15px;
+      animation: flotar 2s infinite ease-in-out;
+    }
+
+    @keyframes zoomIn {
+      from {opacity: 0; transform: scale(0.5);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes aparecer {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1 id="titulo">💌 Tengo algo para ti</h1>
+
+<button id="boton" onclick="mostrarMensaje()">Apretá aquí 💖</button>
+
+<div id="mensaje">
+  GRACIAS Jhisel 🫂<br>
+  <span style="font-size: 60px;">🌹</span>
+</div>
+
+<script>
+function mostrarMensaje() {
+  document.getElementById('mensaje').style.display = 'block';
+
+  document.getElementById('boton').style.display = 'none';
+  document.getElementById('titulo').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
